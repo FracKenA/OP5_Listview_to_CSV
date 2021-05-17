@@ -17,7 +17,7 @@ Required Arguments:
   -q QUERY, --query QUERY
                         OP5 Listview Filter to create CSV from. Make sure to enclose with a single quote due to brackets. You can copy the listview filter manual input into this argument.
                         More information can be found at https://docs.itrsgroup.com/docs/op5-monitor/8.1.0/topics/configure/list-view-filters.html
-  -f FILE, --file FILE  CSV file to create. Relative path is supported
+  -f FILE, --file FILE  CSV file to create. Relative path is supported. If the file exists, it will be appended.
 
 Modifier Arguments:
   -s SERVER, --server SERVER
