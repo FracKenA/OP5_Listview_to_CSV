@@ -5,7 +5,7 @@ To use simply download the python file to your OP5 server, or any other server y
 
 
 ```
-usage: main.py [-h] -u USERNAME -p PASSWORD -q QUERY -f FILE [-s SERVER] [-i INSECURE] [-c COLUMNS] [-l LIMIT] [-o OFFSET] [-t SORT]
+usage: main.py [-h] -u USERNAME -p PASSWORD -q QUERY -f FILE [-s SERVER] [-i] [-c COLUMNS] [-l LIMIT] [-o OFFSET] [-t SORT]
 
 OP5 API Query to CSV
 
@@ -22,8 +22,7 @@ Required Arguments:
 Modifier Arguments:
   -s SERVER, --server SERVER
                         OP5 Server DNS Name or IP. Defaults to localhost
-  -i INSECURE, --insecure INSECURE
-                        Allow invalid and self signed SSL Certificates. True/False
+  -i, --insecure        Allow invalid and self signed SSL Certificates. This argument has no options
   -c COLUMNS, --columns COLUMNS
                         OPTIONAL: Columns to display. More information can be found at https://docs.itrsgroup.com/docs/op5-monitor/8.1.0/topics/configure/listview-filter-
                         columns.html#List_view_filter_column_reference
