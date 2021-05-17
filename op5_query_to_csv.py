@@ -19,17 +19,24 @@ required.add_argument("-p", "--password", help="OP5 API args.password", type=str
 required.add_argument("-q", "--query", help="OP5 Listview Filter to create CSV from. Make sure to enclose with a single quote due to brackets. You can copy the listview filter manual input into this argument. More information can be found at https://docs.itrsgroup.com/docs/op5-monitor/8.1.0/topics/configure/list-view-filters.html", type=str, required=True)
 required.add_argument("-f", "--file", help="CSV file to create. Relative path is supported", type=str, required=True)
 optional.add_argument("-s", "--server", help="OP5 Server DNS Name or IP. Defaults to localhost", default="localhost", type=str)
+optional.add_argument("-i", "--insecure", help="Allow invalid and self signed SSL Certificates", default=False, type=bool)
 optional.add_argument("-c", "--columns", help="OPTIONAL: Columns to display. More information can be found at https://docs.itrsgroup.com/docs/op5-monitor/8.1.0/topics/configure/listview-filter-columns.html#List_view_filter_column_reference", type=str)
 optional.add_argument("-l", "--limit", help="OPTIONAL: Limit records count.", type=int)
 optional.add_argument("-o", "--offset", help="OPTIONAL: Offset to start.", type=int)
 optional.add_argument("-t", "--sort", help="OPTIONAL: Sort records. Comma separated list of columns that dictates the objects order, for example sort=name; sort=name,state or sort=name DESC,state ASC. Note that you cannot sort on \"lists\", such as the \"parents\" field in the \"hosts\" table.", type=str)
 
+
 args = parser.parse_args()
 
-conn = http.client.HTTPSConnection(
-    args.server,
-    context=ssl._create_unverified_context()
-)
+if args.insecure:
+    conn = http.client.HTTPSConnection(
+        args.server,
+        context=ssl._create_unverified_context()
+    )
+else:
+    conn = http.client.HTTPSConnection(
+        args.server
+    )
 
 payload = ""
 
