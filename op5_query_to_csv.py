@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 
+# This file is provided as is under the MIT license.
+# This file was created by Ken Dobbins at ITRS Group (kdobbins@itrsgroup.com)
+
 import csv
 import http.client
 import json
