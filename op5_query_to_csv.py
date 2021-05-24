@@ -79,6 +79,10 @@ conn.request("GET", "/api/filter/query?{query}".format(query=urlencode(to_encode
 # Process the response of the GET request.
 res = conn.getresponse()
 
+if res.status >= 400:
+    print('Server returned status code {status} - {reason}'.format(status=res.status, reason=res.reason))
+    exit(1)
+
 # Create JSON from the results.
 json_results = json.loads(res.read())
 
