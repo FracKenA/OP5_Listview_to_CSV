@@ -40,7 +40,7 @@ The links to find more information on how to use these options and modifiers ple
 [https://docs.itrsgroup.com/docs/op5-monitor/8.1.0/topics/configure/list-view-filters.html](https://docs.itrsgroup.com/docs/op5-monitor/8.1.0/topics/configure/list-view-filters.html)
 
 ### Selecting Columns
-[https://docs.itrsgroup.com/docs/op5-monitor/8.1.0/topics/configure/listview-filter-columns.html#List_view_filter_column_reference]()
+[https://docs.itrsgroup.com/docs/op5-monitor/8.1.0/topics/configure/listview-filter-columns.html#List_view_filter_column_reference](https://docs.itrsgroup.com/docs/op5-monitor/8.1.0/topics/configure/listview-filter-columns.html#List_view_filter_column_reference)
 
 ### Limit, Offset and Sort
 Please visit your OP5 Server at the following address.
